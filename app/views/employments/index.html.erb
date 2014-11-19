@@ -1,0 +1,27 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to "New Employment", new_employment_path, class: "btn btn-info" %>
+  </div>
+  <h1>Employments</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Organization</th>
+      <th>Person</th>
+      <th>Job Title</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employments.each do |employment| %>
+      <tr>
+        <td><em><%= employment.organization.name %></em></td>
+        <td><em><%= employment.person.full_name %></em></td>
+        <td><em><%= employment.job_title.name %></em></td>
+        <td><em><%= employment.location.name %></em></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,10 @@
+default: &default
+  adapter: postgresql
+
+development:
+  <<: *default
+  database: rails-collection-select-development
+
+test:
+  <<: *default
+  database: rails-collection-select-test
